@@ -1,0 +1,321 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-bottom: 2px solid #d1d5db;
+  position: sticky;
+  top: 0;
+  padding: 1rem 2rem;
+  z-index: 1000;
+}
+
+nav .title {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #047857;
+  gap: 0.5rem;
+}
+
+nav .title .logo {
+  width: 50px;
+  height: auto;
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+nav ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+/* Profile picture styles */
+.profile-pic {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  border: 2px solid #047857;
+  box-sizing: border-box;
+}
+
+.profile-link {
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.account-profile-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Notification Badge Styles */
+.profile-badge-container {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 55px;
+  overflow: hidden;
+  margin-top: 12px;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  background-color: #ef4444;
+  color: white;
+  border-radius: 50%;
+  min-width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  font-weight: bold;
+  border: 2px solid white;
+  padding: 0 2px;
+  box-sizing: border-box;
+  line-height: 1;
+  overflow: visible;
+  z-index: 2;
+}
+
+/* Link and button styles */
+nav ul li a:not(.profile-link),
+nav ul li .logout-btn {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: #047857;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+nav ul li .logout-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  text-align: left;
+  width: 100%;
+}
+
+/* Mobile menu container */
+.menu-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  order: 1;
+}
+
+/* Hamburger menu styles */
+.menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2.5rem;
+  height: 2rem;
+  cursor: pointer;
+  position: relative;
+  z-index: 1001;
+}
+
+.menu span {
+  height: 0.4rem;
+  width: 100%;
+  background-color: #047857;
+  border-radius: 0.2rem;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.menu.open span:nth-child(1) {
+  transform: translateY(0.7rem) rotate(45deg);
+}
+
+.menu.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu.open span:nth-child(3) {
+  transform: translateY(-0.7rem) rotate(-45deg);
+}
+
+/* Mobile profile picture */
+.mobile-profile-container {
+  display: none;
+  align-items: center;
+}
+
+/* Desktop styles */
+@media (min-width: 1122px) {
+  nav ul li a:not(.profile-link)::after,
+  nav ul li .logout-btn::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #4ade80;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+  }
+
+  nav ul li a:not(.profile-link):hover::after,
+  nav ul li .logout-btn:hover::after {
+    width: 100%;
+    left: 0;
+  }
+
+  .mobile-profile-container {
+    display: none;
+  }
+
+  .account-profile-container .profile-badge-container {
+    margin-left: 0;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 1250px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  nav .title {
+    width: 100%;
+    justify-content: flex-start;
+    margin-top: 0.5rem;
+  }
+
+  .menu-container {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .mobile-profile-container {
+    display: flex;
+  }
+
+  nav .menu {
+    display: flex;
+    width: 3.2rem;
+    overflow: hidden;
+    margin-right: 5px;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin: 1rem 0 0 0;
+    gap: 0.5rem;
+    padding: 0;
+  }
+
+  nav ul.open {
+    display: flex;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav ul li a {
+    display: block;
+    width: 100%;
+    padding: 1.25rem 1rem;
+    color: #047857;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+    text-align: center;
+  }
+
+  nav ul li .logout-btn {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    color: #047857;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+    text-align: center;
+  }
+
+  nav ul li a.active,
+  nav ul li .logout-btn.active,
+  nav ul li a.active:hover,
+  nav ul li .logout-btn.active:hover {
+    background-color: #047857;
+    color: white;
+  }
+
+  nav ul li a:not(.profile-link)::after,
+  nav ul li .logout-btn::after {
+    content: none !important;
+  }
+
+  nav ul li a:hover,
+  nav ul li .logout-btn:hover {
+    background-color: transparent;
+    color: #047857;
+  }
+
+  .mobile-profile-container .profile-badge-container {
+    width: 48px;
+    height: 48px;
+  }
+
+  .mobile-profile-container .profile-pic {
+    width: 44px;
+    height: 44px;
+  }
+
+  .mobile-profile-container .notification-badge {
+    min-width: 23px;
+    height: 23px;
+    font-size: 0.75rem;
+    top: -2px;
+    right: -2px;
+  }
+
+  /* Account section styling */
+  .account-profile-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .account-profile-container .account-link {
+    text-align: center;
+    padding: 0.5rem 1rem;
+  }
+
+  /* Hide desktop profile picture in mobile menu */
+  .account-profile-container .profile-link {
+    display: none;
+  }
+}

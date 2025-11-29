@@ -1,0 +1,143 @@
+.booking-page {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f3f4f6;
+  border-radius: 8px;
+}
+
+.booking-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #374151;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.booking-page .event-card {
+  margin: 0 auto;
+}
+
+/* Booking Form Styles */
+.booking-form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.booking-form .form-group {
+  margin-bottom: 20px;
+}
+
+.booking-form .form-group label {
+  display: block;
+  font-size: 1rem;
+  color: #374151;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.booking-form .form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.booking-form .form-group input:focus {
+  border-color: #065f46;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(4, 120, 87, 0.2);
+}
+
+/* Ticket Count Controls */
+.ticket-count-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.ticket-count-button {
+  background-color: #047857;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ticket-count-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.ticket-count-button:hover:not(:disabled) {
+  background-color: #065f46;
+}
+
+.ticket-count {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #374151;
+  min-width: 30px;
+  text-align: center;
+}
+
+/* Submit Button */
+.submit-button {
+  background-color: #047857;
+  color: #fff;
+  border: none;
+  padding: 15px 20px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.submit-button:hover {
+  background-color: #065f46;
+}
+
+@media (max-width: 768px) {
+  .booking-page {
+    padding: 15px;
+  }
+
+  .booking-page h1 {
+    font-size: 2rem;
+  }
+
+  .booking-form {
+    padding: 15px;
+  }
+
+  .booking-form .form-group input {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .ticket-count-button {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  .ticket-count {
+    font-size: 1rem;
+  }
+
+  .submit-button {
+    padding: 12px 15px;
+    font-size: 0.9rem;
+  }
+}

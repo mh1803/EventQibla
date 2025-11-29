@@ -1,0 +1,70 @@
+be666ff Oct 10, 2023 15:58 G. T. Laycock Initial commit
+52c01c3 Oct 10, 2023 16:05 G. T. Laycock Update README.md
+
+# Implementation Phase
+
+967437d Jan 19, 2025 21:01 M Hussain Added Project Folder
+6b38c9c Jan 19, 2025 21:28 mh660 Configured Node.js, TypeScript, PostgreSQL and React development environment
+e532825 Jan 22, 2025 01:37 mh660 Configured Express.js and added modularity support
+8158878 Jan 22, 2025 02:59 mh660 Added support for vite.js
+50981d5 Jan 22, 2025 08:13 mh660 Added git ignore, env config, successful db connection
+77b03d3 Jan 22, 2025 08:18 mh660 Removed dist from tracking and added to .gitignore
+e95e38c Jan 22, 2025 08:20 M Hussain Replaced dist directory
+87b3234 Jan 29, 2025 07:05 mh660 Set up Vite, added placeholder navbar
+f2d73a0 Jan 29, 2025 07:16 mh660 Added vite.js and placeholder navbar
+e2cb2bc Jan 29, 2025 07:28 mh660 Reverted previous commit, which was an error
+8630906 Feb 05, 2025 20:45 mh660 Added Navbar and Homepage
+af9ee19 Feb 10, 2025 18:24 mh660 Added User Registration
+a018461 Feb 12, 2025 18:35 mh660 Added Login functionality and shared CSS for Login/Register
+383baf0 Feb 21, 2025 10:12 mh660 Added Event Creation
+e59d5fa Feb 27, 2025 14:27 mh660 Updated navbar and added additional error handling
+c25e185 Mar 08, 2025 11:55 mh660 Added Event Search And Filter System
+2fec66b Mar 12, 2025 15:40 mh660 Added Event Profiles And Updated Other Components
+5652d36 Mar 14, 2025 13:52 mh660 Fixed Event Filter and Flagging Errors
+d7261bd Apr 04, 2025 10:06 mh660 Added Event Booking and Confirmation
+aba5c31 Apr 08, 2025 14:03 mh660 Added My Tickets Section
+5e5f0de Apr 10, 2025 21:54 mh660 Added My Events Section and Updated My Tickets
+ff2aa4e Apr 12, 2025 19:16 mh660 Added Review System
+52604e7 Apr 12, 2025 19:21 mh660 Added My Account Section
+f7ec83b Apr 12, 2025 19:22 mh660 Updated Navbar To Support User Profile Picture
+e1a03fe Apr 14, 2025 04:49 mh660 Added Notification System and My Notifications
+a354ed7 Apr 14, 2025 04:54 mh660 Added Removal Reason
+2ca57a1 Apr 14, 2025 09:11 mh660 Added Automatic Cleanup and Completion For Events and Tickets
+d717bd2 Apr 14, 2025 09:16 mh660 Adjusted CSS
+e5c5579 Apr 15, 2025 14:42 mh660 Added Component Refresh After Token Expiration And New Notifications
+515aca3 Apr 16, 2025 20:39 mh660 Added Admin User and Event Management
+9e9f2be Apr 17, 2025 19:56 mh660 Reworked Event Profile Page
+d44e9b0 Apr 17, 2025 23:23 mh660 Various Bug Fixes
+df20b85 Apr 18, 2025 00:27 mh660 Updated Login To Reject Banned Users
+8d08dc2 Apr 20, 2025 21:39 mh660 Added Additional Error Handling And Notifications
+acd9803 Apr 20, 2025 22:08 mh660 Added Additional Calendar Options
+
+// Pre Production Deployment Phase
+
+b849411 Apr 21, 2025 01:18 mh660 Adjustments Made For Deployment
+250e8f7 Apr 21, 2025 03:59 mh660 Updated Api Calls
+d173d6e Apr 21, 2025 18:35 mh660 Added Page Lazy Loading
+49a84a5 Apr 21, 2025 20:48 mh660 Added Event Search Pagination
+9d7b272 Apr 22, 2025 00:08 mh660 Added Lazy Loading And Memoize To My Tickets
+cae6d33 Apr 22, 2025 03:57 mh660 Optimised My Events and My Tickets
+ee25867 Apr 25, 2025 03:11 mh660 Performance Optimisations And Bug Fixes
+fa12abe Apr 25, 2025 05:14 mh660 Removed Duplicate Reminder Notifications For Organisers
+
+// Testing Phase (Apr 25, 2025 - Apr 28, 2025)
+
+// Addressing Feedback 
+
+140594e Apr 29, 2025 05:53 mh660 Updated Several Components
+9106de8 May 01, 2025 07:37 mh660 Created Events & Tickets Page
+3071b8c May 01, 2025 11:06 mh660 Added Username Login
+
+// Preparing for Submission
+
+5e53767 May 01, 2025 18:23 mh660 Code Refactor And Bug Fixes
+0a79f6e May 01, 2025 17:26 M Hussain Updated README.md
+a102523 May 01, 2025 22:59 mh660 Additional Refactoring And Bug Fixes
+13af2ce May 01, 2025 23:55 mh660 Updated Read Me
+90a1506 May 01, 2025 23:59 mh660 Applied stashed changes and added project-log.txt
+9f0332b May 02, 2025 00:08 mh660 Updated Project Log
+f25b789 May 02, 2025 00:13 mh660 Updated Project Log
+88c74d9 May 02, 2025 09:14 mh660 Added Additional Comments

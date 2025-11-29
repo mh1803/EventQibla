@@ -1,0 +1,329 @@
+:root {
+  --background-color: #f3f4f6;
+  --text-color: #374151;
+  --border-radius: 4px;
+  --transition-speed: 0.3s;
+  --card-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --card-hover-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.my-tickets-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9fafb;
+  margin-top: 20px;
+}
+
+.my-tickets-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.my-tickets-title {
+  color: var(--primary-color);
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.ticket-filter-dropdown {
+  margin-left: auto;
+}
+
+.status-select {
+  padding: 8px 12px;
+  border-radius: var(--border-radius);
+  border: 2px solid var(--primary-color);
+  background: white;
+  color: var(--primary-color);
+  font-weight: bold;
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+  font-size: 14px;
+}
+
+.status-select:focus {
+  outline: none;
+  border-color: var(--primary-hover-color);
+  box-shadow: 0 0 0 3px rgba(4, 120, 87, 0.2);
+}
+
+/* Tickets List */
+.my-tickets-results {
+  max-height: 600px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.my-tickets-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.my-tickets-details {
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  transition: transform var(--transition-speed) ease,
+    box-shadow var(--transition-speed) ease;
+  border: 1px solid #e5e7eb;
+}
+
+.my-tickets-details.clickable-ticket:hover {
+  transform: translateY(-3px);
+  border-color: #34d399;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(52, 211, 153, 0.2);
+}
+
+.my-tickets-details.cancelled-ticket {
+  cursor: not-allowed;
+  opacity: 0.7;
+  background-color: #f9f9f9;
+}
+
+.my-tickets-details.cancelled-ticket:hover {
+  transform: none;
+  box-shadow: var(--card-shadow);
+  border-color: #e5e7eb;
+}
+
+/* Tickets Card */
+.my-tickets-card {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.my-tickets-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.my-tickets-info h3 {
+  color: var(--primary-color);
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.my-tickets-info p {
+  margin: 6px 0;
+  color: var(--text-color);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Ticket Actions */
+.ticket-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+}
+
+.calendar-button,
+.cancel-ticket-button,
+.review-button {
+  padding: 8px 12px;
+  border-radius: var(--border-radius);
+  font-weight: bold;
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  white-space: nowrap;
+}
+
+.calendar-button {
+  background-color: white;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.calendar-button:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.review-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+}
+
+.review-button:hover {
+  background-color: var(--primary-hover-color);
+}
+
+.cancel-ticket-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  width: 45px;
+  justify-content: center;
+}
+
+.cancel-ticket-button:hover {
+  background-color: #c82333;
+  box-shadow: 0 4px 8px rgba(220, 53, 69, 0.2);
+}
+
+/* Scrollbar styling */
+.my-tickets-results::-webkit-scrollbar {
+  width: 6px;
+}
+
+.my-tickets-results::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.my-tickets-results::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.my-tickets-results::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Calendar Modal Styles */
+.calendar-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.calendar-service-button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: left;
+}
+
+.calendar-service-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-service-button.google {
+  background-color: #4285f4;
+}
+
+.calendar-service-button.outlook {
+  background-color: #0072c6;
+}
+
+.calendar-service-button.apple {
+  background-color: #000000;
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 6px;
+}
+
+.calendar-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.modal-buttons {
+  margin-top: 24px;
+}
+
+@media (max-width: 1350px) {
+  .my-tickets-container {
+    padding: 20px 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  .my-tickets-list {
+    grid-template-columns: 1fr;
+  }
+
+  .my-tickets-details {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .my-tickets-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .ticket-filter-dropdown {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .status-select {
+    width: 100%;
+  }
+
+  .ticket-actions {
+    flex-wrap: wrap;
+  }
+
+  .calendar-button,
+  .cancel-ticket-button,
+  .review-button {
+    flex: 1;
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .my-tickets-container {
+    padding: 20px;
+  }
+
+  .my-tickets-results {
+    max-height: 500px;
+  }
+
+  .my-tickets-card {
+    padding: 12px;
+  }
+
+  .ticket-actions {
+    gap: 8px;
+  }
+
+  .calendar-button,
+  .cancel-ticket-button,
+  .review-button {
+    padding: 8px;
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,233 @@
+/* Event Results */
+.event-results {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f9fafb;
+}
+
+/* Event Grid */
+.event-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 440px);
+  justify-content: left;
+  min-width: fit-content;
+  margin: 0 auto;
+  padding: 20px;
+  margin-bottom: 5px;
+}
+
+/* Event Card */
+.event-card {
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: left;
+  border: 2px solid #d1d5db;
+  flex-direction: column;
+  position: relative;
+  flex-shrink: 0;
+  width: 400px;
+  height: 415px;
+  margin-bottom: 35px;
+  overflow: hidden;
+}
+
+.event-card:hover {
+  transform: translateY(-3px);
+  border-color: #34d399;
+  box-shadow: 0 3px 10px rgba(52, 211, 153, 0.2);
+}
+
+/* Event Image Container */
+.event-image-container {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 10px;
+  border-radius: 0;
+  padding: 0;
+  border: none;
+}
+
+/* Event Image */
+.event-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: none;
+  padding: 0;
+  margin: 0;
+  pointer-events: none;
+  transition: transform 0.3s ease;
+}
+
+.event-image-container img:hover {
+  transform: scale(1.05);
+}
+
+/* Event Info */
+.event-card h3 {
+  font-size: 20px;
+  color: #047857;
+  margin-left: 10px;
+  font-weight: 800;
+}
+
+.event-card p {
+  font-size: 13px;
+  margin: 2px 0;
+  color: #555;
+  line-height: 1.4;
+  margin-top: 6px;
+  margin-left: 12px;
+}
+
+.event-card .gender-info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #555;
+}
+
+.event-card .gender-info::before {
+  content: "👤";
+  font-size: 14px;
+}
+
+/* Price Styling */
+.event-price {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #047857;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 4px 8px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Categories Styling */
+.event-card .categories {
+  position: relative;
+  margin-left: 3px;
+  margin-top: 6px;
+  font-size: 12px;
+  font-style: italic;
+  color: #666;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-align: left;
+  width: fit-content;
+}
+
+.event-flag-count {
+  position: absolute;
+  bottom: 125px;
+  right: 16px;
+  color: #ff4444;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: 30px 0;
+  padding: 16px;
+  background: #f3f4f6;
+  border-radius: 4px;
+}
+
+.pagination-controls button {
+  padding: 8px 16px;
+  border: 2px solid #047857;
+  background: white;
+  color: #047857;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pagination-controls button:hover:not(:disabled) {
+  background-color: #047857;
+  color: white;
+}
+
+.pagination-controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border-color: #ccc;
+  color: #ccc;
+}
+
+.pagination-controls span {
+  font-size: 14px;
+  color: #374151;
+  font-weight: 500;
+  min-width: 100px;
+  text-align: center;
+}
+
+.pagination-controls select {
+  padding: 8px;
+  border: 2px solid #047857;
+  border-radius: 4px;
+  background: white;
+  color: #047857;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pagination-controls select:focus {
+  outline: none;
+  border-color: #065f46;
+  box-shadow: 0 0 0 3px rgba(4, 120, 87, 0.2);
+}
+
+@media (max-width: 1399px) {
+  .event-list {
+    padding: 20px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .pagination-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .pagination-controls > * {
+    width: 100%;
+    text-align: center;
+  }
+
+  .pagination-controls span {
+    order: -1;
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .event-card {
+    width: 350px;
+    height: 415px;
+    padding: 0;
+    margin-right: auto;
+  }
+
+  .event-list {
+    padding: 5px;
+  }
+}

@@ -1,0 +1,241 @@
+:root {
+  --border-radius: 4px;
+  --transition-speed: 0.3s;
+}
+
+.event-item.cancelled-event .event-card:hover {
+  transform: none;
+  border-color: rgb(215, 215, 215);
+  box-shadow: none;
+}
+
+.my-events-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9fafb;
+  margin-top: 20px;
+}
+
+.my-events-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.my-events-title {
+  color: var(--primary-color);
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.my-events-container .event-results {
+  max-height: 600px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 440px);
+}
+
+/* Scrollbar styling */
+.my-events-container .event-results::-webkit-scrollbar {
+  width: 6px;
+}
+
+.my-events-container .event-results::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.my-events-container .event-results::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.my-events-container .event-results:-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+.event-item {
+  padding-top: 20px;
+}
+
+.event-actions-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f9f9f9;
+  border-top: 1px solid #eee;
+  width: 400px;
+  margin-bottom: 20px;
+}
+
+.event-actions-container button {
+  padding: 10px 16px;
+  height: 50px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.view-attendees-button {
+  background-color: #065f46;
+  color: white;
+  border: none;
+  width: 200px;
+}
+
+.view-attendees-button:hover {
+  background-color: #054f3a;
+}
+
+.edit-button {
+  background-color: white;
+  color: #065f46;
+  border: 2px solid #065f46;
+  width: 100px;
+}
+
+.edit-button:hover {
+  background-color: #065f46;
+  color: white;
+}
+
+.cancel-event-button {
+  background-color: #dc3545;
+  color: white;
+  width: 50px;
+  border-color: #dc3545;
+}
+
+.cancel-event-button:hover {
+  background-color: #c82333;
+  box-shadow: 0 4px 8px rgba(220, 53, 69, 0.2);
+}
+
+.error-message {
+  color: #dc3545;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.cancelled-note {
+  font-size: 14px;
+  color: #6c757d;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+/*Cancellation Modal Styles*/
+.my-events-container .cancellation-reason {
+  margin: 1.5rem 0;
+}
+
+.my-events-container .cancellation-reason label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.my-events-container .cancellation-reason textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  resize: vertical;
+  transition: border-color 0.2s;
+}
+
+.my-events-container .cancellation-reason textarea:focus {
+  outline: none;
+  border-color: #047857;
+  box-shadow: 0 0 0 2px rgba(4, 120, 87, 0.1);
+}
+
+.my-events-container .cancellation-reason textarea::placeholder {
+  color: #999;
+}
+
+/* Modal Buttons */
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.modal-button {
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 2px solid transparent;
+}
+
+.warning-message {
+  color: #d97706;
+  background-color: #fef3c7;
+  padding: 0.75rem;
+  border-radius: var(--border-radius);
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 1364px) {
+  .my-events-container .event-results {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .event-item {
+    margin-left: 35px;
+  }
+
+  .view-attendees-button {
+    width: 160px;
+  }
+
+  .edit-button {
+    background-color: white;
+    color: #065f46;
+    border: 2px solid #065f46;
+    width: 100px;
+  }
+
+  .my-events-container .event-results {
+    grid-template-columns: 1fr;
+    padding: 5px;
+    width: 100%;
+    margin: 0;
+    overflow-x: visible;
+  }
+
+  .my-events-container .event-item {
+    width: 100%;
+    max-width: 370px;
+    margin: 0;
+    padding: 10px;
+    padding-left: 5px;
+  }
+
+  .event-actions-container {
+    width: 350px;
+  }
+}

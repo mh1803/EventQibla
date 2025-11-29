@@ -1,0 +1,28 @@
+{
+  "extends": "@tsconfig/node20/tsconfig.json",
+  "compilerOptions": {
+    "target": "ES6", // Target modern JavaScript
+    "module": "ESNext", // Use ESNext modules for ESM
+    "lib": ["dom", "esnext"],
+    "moduleResolution": "node", // Resolve modules in the Node.js style
+    "outDir": "./dist", // Output directory for compiled files
+    "rootDir": "./src", // Root directory for source files
+    "sourceMap": true, // Enable source maps for debugging
+    "noEmitOnError": true, // Prevent emitting files if there are errors
+    "strict": true, // Enable all strict type-checking options
+    "esModuleInterop": true, // Enable compatibility with CommonJS modules
+    "forceConsistentCasingInFileNames": true, // Enforce consistent file name casing
+    "skipLibCheck": true, // Skip type-checking of declaration files
+    "jsx": "react-jsx",
+    "allowSyntheticDefaultImports": true
+  },
+  "include": [
+    "src/backend/**/*",
+    "src/frontend/**/*",
+    "vite-env.d.ts",
+    "src/types/custom.d.ts",
+    "src/backend/utils/.ts",
+    "src/frontend/context/UserContext.tsx"
+  ],
+  "exclude": ["node_modules", "dist"]
+}
