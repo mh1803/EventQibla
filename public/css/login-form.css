@@ -1,10 +1,8 @@
 .login-container {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: center;     
   background-color: #f4f4f4;
-  overflow-y: hidden;
-  padding-bottom: 150px;
+  min-height: 90vh;      
 }
 
 .login-card {
@@ -14,9 +12,10 @@
   border-radius: 8px;
   width: 100%;
   max-width: 400px;
-  height: auto;
-  margin-top: 50px;
+  max-height: fit-content;
+  margin-top: 40px;
 }
+
 
 h2 {
   text-align: center;
@@ -30,12 +29,13 @@ h2 {
 
 .form-group p {
   margin-top: 15px;
+  font-size: 1rem;
 }
 
 .form-group label {
   display: block;
   margin-bottom: 5px;
-  font-size: 14px;
+  font-size: 1.1rem;
   color: #555;
 }
 
