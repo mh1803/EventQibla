@@ -2,7 +2,8 @@
   display: flex;
   justify-content: center;     
   background-color: #f4f4f4;
-  min-height: 90vh;      
+  min-height: 90vh;
+  padding-bottom: 40px;      
 }
 
 .login-card {
@@ -29,14 +30,15 @@ h2 {
 
 .form-group p {
   margin-top: 15px;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .form-group label {
   display: block;
-  margin-bottom: 5px;
-  font-size: 1.1rem;
-  color: #555;
+  margin-bottom: 7px;
+  font-size: 1rem;
+  color: #000000;
+  font-weight: 500;
 }
 
 .form-group input {
@@ -45,6 +47,7 @@ h2 {
   border: 1px solid #ddd;
   border-radius: 4px;
   font-size: 14px;
+  margin-bottom: 7px;
 }
 
 .login-btn {
@@ -56,7 +59,7 @@ h2 {
   color: white;
   font-size: 16px;
   cursor: pointer;
-  margin-top: 25px;
+  margin-top: 10px;
 }
 
 .login-btn:hover {
