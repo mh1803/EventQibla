@@ -5,12 +5,9 @@ import initialiseAdmin from "./db/intialiseAdmin.js";
 import router from "./routes/router.js";
 import path from "path";
 import { fileURLToPath } from "url";
-import { createProxyMiddleware } from "http-proxy-middleware";
 import dotenv from "dotenv";
-import { setupEventCompletionCron } from "./cron/eventCompletionCron.js";
-import { setupEventCleanupCron } from "./cron/eventCleanupCron.js";
-import { setupTicketCleanupCron } from "./cron/ticketCleanupCron.js";
-import { setupEventReminderCron } from "./cron/eventReminderCron.js";
+import cronRoutes from "./routes/internalCronRoutes";
+
 
 dotenv.config(); // Loads .env variables
 
@@ -41,6 +38,8 @@ const __dirname = path.dirname(__filename);
 const isDev = process.env.NODE_ENV === "development";
 
 app.use("/api", router);
+app.use("/cron", cronRoutes);
+
 
 // Start server
 const startServer = async () => {
@@ -51,12 +50,6 @@ const startServer = async () => {
 
     // Initialise admin account
     await initialiseAdmin();
-
-    // Setup all scheduled cron jobs
-    setupEventCompletionCron();
-    setupEventCleanupCron();
-    setupTicketCleanupCron();
-    setupEventReminderCron();
 
     // Run server on port
     app.listen(PORT, () => {

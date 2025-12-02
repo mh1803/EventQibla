@@ -10,7 +10,9 @@
     "dev:backend": "cross-env tsx watch src/backend/server.ts",
     "start:backend": "cross-env node dist/backend/server.js",
     "build:frontend": "vite build --outDir dist/frontend",
-    "start:frontend": "vite"
+    "start:frontend": "vite",
+    "dev:worker": "cross-env tsx watch src/worker.ts",       
+    "start:worker": "cross-env node dist/worker.js"          
   },
   "keywords": [],
   "author": "",
