@@ -1,6 +1,6 @@
 import { Navigate, Outlet, useLocation } from "react-router-dom";
 import { ReactNode } from "react";
-import { useAuth } from "../../../backend/hooks/useAuth.js";
+import { useAuth } from "../../../frontend/hooks/useAuth.js";
 
 interface ProtectedRouteProps {
   isAllowed?: boolean | null;

@@ -2,7 +2,7 @@ import db from "../db/connection.js";
 import {
   Notification,
   CreateNotificationParams,
-} from "../../types/notificationTypes.js";
+} from "../types/notificationTypes";
 
 export class NotificationService {
   private client?: any;

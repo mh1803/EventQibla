@@ -3,8 +3,8 @@ import Navbar from "./components/navbar.js";
 import { Route, Routes } from "react-router-dom";
 import { UserProvider } from "./context/UserContext.js";
 import { NotificationProvider } from "./context/NotificationContext.js";
-import { useAuth } from "../backend/hooks/useAuth.js";
-import { startTokenWatchdog } from "../backend/utils/authHelpers.js";
+import { useAuth } from "../frontend/hooks/useAuth.js";
+import { startTokenWatchdog } from "../frontend/utils/authHelpers.js";
 import { ProtectedRoute } from "./components/routing/protected-route.js";
 import ErrorBoundary from "./components/error-boundary.js";
 

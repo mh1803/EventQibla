@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 import axios from "axios";
-import { useAuth } from "../../backend/hooks/useAuth.js";
+import { useAuth } from "../../frontend/hooks/useAuth.js";
 
 interface UserContextType {
   profilePicture: string;

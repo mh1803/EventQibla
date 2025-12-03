@@ -12,7 +12,7 @@ import {
 import {
   subscribeToAuthChanges,
   unsubscribeFromAuthChanges,
-} from "../utils/authEvent";
+} from "../../backend/utils/authEvent";
 
 interface UserData {
   role: "user" | "admin" | "banned";

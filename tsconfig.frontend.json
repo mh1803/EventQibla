@@ -1,0 +1,22 @@
+{
+  "extends": "@tsconfig/react/tsconfig.json",
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "ESNext",
+    "lib": ["DOM", "ESNext"],
+    "jsx": "react-jsx",
+    "strict": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "outDir": "./dist/frontend",
+    "moduleResolution": "bundler"
+  },
+  "include": [
+    "src/frontend/**/*",
+    "src/types/**/*",
+    "vite-env.d.ts"
+  ],
+  "exclude": ["node_modules", "dist", "src/backend"]
+}

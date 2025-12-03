@@ -2,18 +2,19 @@
   "name": "eventqibla",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "build": "tsc && vite build",
-    "dev": "cross-env concurrently \"vite\" \"tsx watch src/backend/server.ts\"",
-    "serve": "cross-env node dist/backend/server.js",
-    "build:backend": "tsc --outDir dist --project tsconfig.json",
-    "dev:backend": "cross-env tsx watch src/backend/server.ts",
-    "start:backend": "cross-env node dist/backend/server.js",
-    "build:frontend": "vite build --outDir dist/frontend",
-    "start:frontend": "vite",
-    "dev:worker": "cross-env tsx watch src/worker.ts",       
-    "start:worker": "cross-env node dist/worker.js"          
-  },
+"scripts": {
+
+  "build": "npm run build:backend && npm run build:frontend",
+
+  "build:backend": "tsc --project tsconfig.backend.json",
+  "dev:backend": "cross-env tsx watch src/backend/server.ts",
+  "start:backend": "cross-env node dist/backend/server.js",
+
+  "build:frontend": "vite build --outDir dist/frontend",
+  "start:frontend": "vite",
+  "dev": "cross-env concurrently \"vite\" \"tsx watch src/backend/server.ts\""
+  
+},
   "keywords": [],
   "author": "",
   "license": "ISC",

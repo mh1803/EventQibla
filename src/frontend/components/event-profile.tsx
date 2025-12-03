@@ -8,7 +8,7 @@ import React, {
 } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { formatDateWithOrdinal } from "../../backend/utils/dateFormatter.js";
-import { useAuth } from "../../backend/hooks/useAuth.js";
+import { useAuth } from "../../frontend/hooks/useAuth.js";
 import "../../../public/css/event-profile.css";
 
 // Lazy loaded Modals

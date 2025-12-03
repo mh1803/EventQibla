@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, NavLink, useNavigate, useLocation } from "react-router-dom";
 import { useNotifications } from "../context/NotificationContext";
-import { useAuth } from "../../backend/hooks/useAuth";
+import { useAuth } from "../../frontend/hooks/useAuth";
 import { useUser } from "../context/UserContext";
 import "../../../public/css/navbar.css";
 

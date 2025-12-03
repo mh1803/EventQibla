@@ -6,7 +6,7 @@ import router from "./routes/router.js";
 import path from "path";
 import { fileURLToPath } from "url";
 import dotenv from "dotenv";
-import cronRoutes from "./routes/internalCronRoutes";
+import cronRoutes from "./routes/internalCronRoutes.js";
 
 
 dotenv.config(); // Loads .env variables

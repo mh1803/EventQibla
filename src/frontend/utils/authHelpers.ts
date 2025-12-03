@@ -1,5 +1,5 @@
 import axios, { AxiosError, AxiosResponse } from "axios";
-import { emitAuthChange } from "./authEvent";
+import { emitAuthChange } from "../../backend/utils/authEvent";
 
 interface DecodedToken {
   exp?: number;
