@@ -16,13 +16,7 @@
     "jsx": "react-jsx",
     "allowSyntheticDefaultImports": true
   },
-  "include": [
-    "src/backend/**/*",
-    "src/frontend/**/*",
-    "vite-env.d.ts",
-    "src/types/custom.d.ts",
-    "src/backend/utils/.ts",
-    "src/frontend/context/UserContext.tsx"
-  ],
+  "include": ["src/**/*", "vite-env.d.ts", "src/types/custom.d.ts"],
+
   "exclude": ["node_modules", "dist"]
 }
